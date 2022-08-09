@@ -6435,11 +6435,14 @@ input:focus:-ms-input-placeholder {
     left: 3px;
   }
   #nav_bar img.memoji-logo {
-    top: -3px;
+    top: -10px;
     width: 65px;
     left: 60px;
     transform: rotateZ(-14deg);
     animation: none;
+  }
+  #nav_bar img.home-memoji-logo {
+    top: -2px;
   }
   .home-page h1:before {
     left: 13px;
