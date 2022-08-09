@@ -72,6 +72,7 @@ html {
 body {
   font: 300 11px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #444;
+  height: 100vh;
 }
 
 body {
@@ -5066,11 +5067,11 @@ body.no-overflow {
 
 .bg svg {
   position: relative;
-  width: 200%;
+  width: 100%;
   height: auto;
-  top: -250px;
-  left: 40px;
+  top: 25%;
   bottom: 0;
+  scale: 1.2;
   -webkit-transform: rotateZ(20deg) !important;
   -ms-transform: rotate(20deg) !important;
   transform: rotateZ(20deg) !important;
@@ -5078,10 +5079,9 @@ body.no-overflow {
 
 .bg .jb {
   position: absolute;
-  top: 133px;
+  top: 25%;
   right: auto;
   bottom: auto;
-  left: 50px;
   margin: auto;
   width: 120%;
   opacity: 0;
@@ -5089,6 +5089,7 @@ body.no-overflow {
   -ms-transform: rotate(20deg) !important;
   transform: rotateZ(20deg) !important;
   z-index: 1;
+  scale: 1.2;
 }
 
 @keyframes myanim {
@@ -6368,7 +6369,11 @@ input:focus:-ms-input-placeholder {
     display: none;
   }
 }
-
+@media (max-width: 625px) and (min-width: 530px) {
+  #nav_bar {
+    width: 110% !important;
+  }
+}
 @media (max-width: 1024px) {
   .container.contact .text-zone {
     width: 36%;
@@ -6427,7 +6432,7 @@ input:focus:-ms-input-placeholder {
     left: 3px;
   }
   #nav_bar img.memoji-logo {
-    top: -10px;
+    top: -3px;
     width: 65px;
     left: 60px;
     transform: rotateZ(-14deg);
@@ -6683,9 +6688,20 @@ input:focus:-ms-input-placeholder {
   #nav_bar nav a:last-child::after {
     right: 10px;
   }
+  .bg .jb {
+    scale: 1;
+    left: 120px;
+  }
+  .bg svg {
+    scale: 1;
+    left: 120px;
+  }
 }
 
 @media (max-width: 530px) {
+  .home-page h1 img {
+    width: 50px;
+  }
   .preloader .inner {
     width: 80%;
   }
@@ -6698,6 +6714,14 @@ input:focus:-ms-input-placeholder {
   }
   #nav_bar ul {
     display: none;
+  }
+  .bg .jb {
+    top: 15%;
+    scale: 0.6;
+  }
+  .bg svg {
+    top: 15%;
+    scale: 0.6;
   }
   .home-page .text-zone {
     width: 85%;
